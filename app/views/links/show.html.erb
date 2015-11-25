@@ -32,8 +32,9 @@
 </h3>
 
 <div id="comments">
-  <%= render :partial => @link.comments %>
+ <%= render "comments/comment" %>
 </div>
+
 <%= simple_form_for [@link, Comment.new] do |f| %>
   <div class="field">
     <%= f.text_area :body, class: "form-control" %>
